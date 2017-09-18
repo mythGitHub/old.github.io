@@ -1,0 +1,173 @@
+* {
+  margin: 0px;
+}
+
+html {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+		/*呼吸发光字*/
+    	.chance{
+		  font-size:1.5em;
+		  color:#228DFF;
+		  font-weight: bolder;
+		  padding-left: 50px;
+  		  padding-top: 22px;
+		}
+		
+		.chance:hover{
+		  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+		  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+		  animation: neon2 1.5s ease-in-out infinite alternate;
+		}
+		@-webkit-keyframes neon2 {
+		  from {
+		    text-shadow: 0 0 10px #fff,
+		               0 0 20px  #fff,
+		               0 0 30px  #fff,
+		               0 0 40px  #228DFF,
+		               0 0 70px  #228DFF,
+		               0 0 80px  #228DFF,
+		               0 0 100px #228DFF,
+		               0 0 150px #228DFF;
+		  }
+		  to {
+		    text-shadow: 0 0 5px #fff,
+		               0 0 10px #fff,
+		               0 0 15px #fff,
+		               0 0 20px #228DFF,
+		               0 0 35px #228DFF,
+		               0 0 40px #228DFF,
+		               0 0 50px #228DFF,
+		               0 0 75px #228DFF;
+		  }
+		}
+		@-moz-keyframes neon2 {
+		  from {
+		    text-shadow: 0 0 10px #fff,
+		               0 0 20px  #fff,
+		               0 0 30px  #fff,
+		               0 0 40px  #228DFF,
+		               0 0 70px  #228DFF,
+		               0 0 80px  #228DFF,
+		               0 0 100px #228DFF,
+		               0 0 150px #228DFF;
+		  }
+		  to {
+		    text-shadow: 0 0 5px #fff,
+		               0 0 10px #fff,
+		               0 0 15px #fff,
+		               0 0 20px #228DFF,
+		               0 0 35px #228DFF,
+		               0 0 40px #228DFF,
+		               0 0 50px #228DFF,
+		               0 0 75px #228DFF;
+		  }
+		}
+		@keyframes neon2 {
+		  from {
+		    text-shadow: 0 0 10px #fff,
+		               0 0 20px  #fff,
+		               0 0 30px  #fff,
+		               0 0 40px  #228DFF,
+		               0 0 70px  #228DFF,
+		               0 0 80px  #228DFF,
+		               0 0 100px #228DFF,
+		               0 0 150px #228DFF;
+		  }
+		  to {
+		    text-shadow: 0 0 5px #fff,
+		               0 0 10px #fff,
+		               0 0 15px #fff,
+		               0 0 20px #228DFF,
+		               0 0 35px #228DFF,
+		               0 0 40px #228DFF,
+		               0 0 50px #228DFF,
+		               0 0 75px #228DFF;
+		  }
+		}
+
+.weapon{
+	position:absolute;
+	right:-35px;
+	color:#51C47B;
+	cursor:pointer;
+	z-index:1000000;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  background-color: #3D4A53;
+  border-right: 10px solid #1BBC9B;
+  transition: width 2s;
+  -moz-transition: width 2s; /* Firefox 4 */
+  -webkit-transition: width 2s; /* Safari 和 Chrome */
+  -o-transition: width 2s; /* Opera */
+}
+.sidebar ul {
+  margin-top: 30px;
+}
+.sidebar li {
+  list-style: none;
+  padding: 10px;
+  position: relative;
+}
+.sidebar a {
+  text-decoration: none;
+  color: #919DB1;
+  font-size: 14px ;
+  font-weight:bolder;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1000;
+}
+.sidebar .hover {
+  display: block;
+  position: absolute;
+  width: 0%;
+  height: 40px;
+  top: 0px;
+  left: 0px;
+  background: #1BBC9B;
+  z-index: 0;
+  opacity: 0;
+}
+.sidebar a:hover {
+  color: #FFF;
+}
+.sidebar .fa-angle-right {
+  position: absolute;
+  left: 150px;
+  top: 1px;
+}
+.sidebar .sub-menu {
+  position: absolute;
+  left: 210px;
+  top: -30px;
+  padding: 0px;
+  width: 220px;
+  display: none;
+  background-color: #3D4A53;
+}
+.sidebar .sub-menu li a {
+  padding-left: 20px;
+  font-size: 13px;
+}
+.sidebar .sub-menu i {
+  left: 180px;
+}
+.sidebar ul li:hover ul {
+  display: block;
+}
+.sidebar .push {
+  margin-right: 10px;
+}
+
+
+.color {
+  color: #d00355;
+}

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+		<style>
+			body{
+				font-family: "微软雅黑";
+				background: #898989;
+				height: 1300px;
+			}
+			header{
+				position:absolute;
+				z-index: 500;
+				width: 100%;
+			}
+			header .header{
+				width: 70%;
+				position: relative;
+				top: 0;
+				z-index: 5;
+				float: right;
+			}
+			ol,ul{
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				
+			}
+			a{
+				text-decoration: none;
+			}
+			 header .header nav ul li{
+			 	width: 6em;
+			 	height:5em;
+			 	display: inline-block;
+			 	text-align: center;
+			 }
+			 header .header nav ul li a{
+			 	color: white;
+			 	display: inline-block;
+			 	height: 2.75em;
+			 	margin-top: 2.25em;
+			 }
+			 .site-assistant{
+			 	width: 77px;
+			 	position: fixed;
+			 	top: 0;
+			 	right: 0;
+			 	z-index: 1000;
+			 }
+			 .assistant-switch{
+			 	position: relative;
+			 	top: 0;
+			 	left: 0;
+			 	display: block;
+			 	width:77px;
+			 	height: 77px;
+			 	z-index: 1;
+			 }
+			 
+			 .site-assistant ul{
+			 	position: absolute;
+			 	left: 0;
+			 	top: 80px;
+			 	width: 100%;
+			 	z-index: 5;
+			 	background: rgba(255,255,255,.8);
+			 }
+			 
+			 .site-assistant ul li{
+			 	font-size: .5em;
+			 	text-align: center;
+			 	padding: 1em .5em;
+			 	position: relative;
+			 }
+			 
+			 .site-assistant ul li a{
+			 	display: block;
+			 	border-bottom: 1px dashed #647b99;
+			 	padding-bottom: .5em;
+			 	color: #000000;
+			 	position: relative;
+			 	z-index: 1;
+			 }
+			 .site-assistant ul li a img{
+			 	margin-bottom: .8em;
+			 }
+			 .cycle{
+			 	width: 100%;
+			 	height: 20%;
+			 	position: relative;
+			 	overflow: hidden;
+			 	z-index: 1;
+			 }
+			 .swiper-slide{
+			 	width: 100%;
+			    height: 100%;
+			 	position: absolute;
+			    pointer-events: none;
+			    -webkit-transition-property: opacity;
+			    -moz-transition-property: opacity;
+			    -o-transition-property: opacity;
+			    transition-property: opacity;
+			    -webkit-transition-duration: 2500ms;
+			    -moz-transition-duration: 2500ms;
+			    -o-transition-duration: 2500ms;
+			    transition-duration: 2500ms;
+			    opacity: 0;
+			    
+			 }
+			 .active{
+			 	opacity: 1;
+			 }
+			 .swiper-slide img{
+			 	width: 100%;
+			    height: 100%;
+			 	position: relative;
+			 	z-index: 1;
+			 }
+			 .nav{
+			 	width: 100%;
+			 	background: #FFFFFF;
+			 	position: relative;
+			 	height: 5%;
+			 	border-bottom: 1px solid #e5e5e5;
+			 	font-size: 14px;
+			 	z-index: 1;
+			 	font-family: "AcFun Symbol","Helvetica Neue",Helvetica,Arial,"Microsoft Yahei",STHeiti,sans-serif;
+			 }
+			 .nav .nav-parent{
+			 	background: #FFFFFF;
+			 	padding: 0 10px;
+    			border-radius: 3px 3px 0 0;
+    			width: 80%;
+    			height: 100%;
+    			margin: 0 auto;
+			 }
+			 .nav .nav-parent ul{
+			 	height: 100%;
+			 	margin: 0;
+			 	padding:0;
+			 }
+			 .nav .nav-parent ul li{
+			 	margin: 0 2%;
+			 	padding:0;
+			 	float: left;
+			 	height: 100%;
+			 	text-align: center;
+			 	line-height: 4em;
+			 	
+			 }
+			 .nav .nav-parent ul li a{
+			 	height: 100%;
+			 	
+			 }
+			 .target{
+			 	border-bottom: 3px solid #fd4c5d;
+			 	color: #fd4c5d;
+			 }
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="header">
+				<nav>
+					<ul>
+						<li>
+							<a href="#">畅销榜单</a>
+						</li>
+						<li>
+							<a href="#">畅销榜单</a>
+						</li>
+						<li>
+							<a href="#">畅销榜单</a>
+						</li>
+						<li>
+							<a href="#">畅销榜单</a>
+						</li>
+						<li>
+							<a href="#">畅销榜单</a>
+						</li>
+						<li>
+							<a href="#">畅销榜单</a>
+						</li>
+						<li>
+							<a href="#">畅销榜单</a>
+						</li>
+					</ul>
+				</nav>
+				
+				<div class="site-assistant">
+					<a href="javascript:;" class="assistant-switch">
+						<img src="images/icon-assistant-open.jpg" img-responsive" data-icon-open="images/icon-assistant-open.jpg" data-icon-close="images/icon-assistant-close.jpg" />
+					</a>
+					
+					<ul style="display: none;">
+						<li>
+							<a href="javascript:;" class="assistant-banner">
+								<img src="images/menu1.png" class="center-block img-responsive"/>
+								<span>最新活动</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="assistant-banner">
+								<img src="images/menu1.png" class="center-block img-responsive"/>
+								<span>最新活动</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="assistant-banner">
+								<img src="images/menu1.png" class="center-block img-responsive"/>
+								<span>最新活动</span>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="assistant-banner">
+								<img src="images/menu1.png" class="center-block img-responsive"/>
+								<span>最新活动</span>
+							</a>
+						</li>
+					</ul>
+					
+				</div>
+				
+			</div>
+		</header>
+		
+		<div class="cycle">
+				<div class="swiper-slide active">
+					<a href="#">
+						<img src="images/kv4.jpg" class="img-responsive" />
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="#">
+						<img src="images/kv5.jpg" class="img-responsive" />
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="#">
+						<img src="images/kv1.jpg" class="img-responsive" />
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="#">
+						<img src="images/kv2.jpg" class="img-responsive" />
+					</a>
+				</div>
+		</div>
+		
+		
+		<nav class="nav">
+			<div class="nav-parent">
+				<ul>
+					<li >
+						<a href="#">首页</a>
+					</li>
+					<li class="target">
+						<a href="#" style="color: #fd4c5d;">AC正义</a>
+					</li>
+					<li>
+						<a href="#">动画</a>
+					</li>
+					<li>
+						<a href="#">二次元</a>
+					</li>
+					<li>
+						<a href="#">国产</a>
+					</li>
+					<li>
+						<a href="#">音乐</a>
+					</li>
+					<li>
+						<a href="#">舞蹈.彼女</a>
+					</li>
+					<li>
+						<a href="#">游戏</a>
+					</li>
+					<li>
+						<a href="#">娱乐</a>
+					</li>
+					<li>
+						<a href="#">科技</a>
+					</li>
+					<li>
+						<a href="#">体育</a>
+					</li>
+					<li>
+						<a href="#">鱼塘</a>
+					</li>
+					<li>
+						<a href="#">文章</a>
+					</li>
+					<li>
+						<a href="#">合辑</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		
+		
+	</body>
+	<script type="text/javascript" src="js/jquery-3.1.1.js" ></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
+	<script>
+		
+		$(".assistant-switch").hover(function(){
+			
+			e=$(this); //a标签
+			a=$(this).find("img").eq(0); //图片
+			t=$(this).next(); //悬浮框
+			e.addClass("hover-this");
+			t.hasClass("active")||
+			(
+				a.attr("src",a.attr("data-icon-close")),
+				t.addClass("active"),
+				t.hover(function(){
+						t.addClass("hover-this");
+					},function(){
+						t.removeClass("hover-this"),
+							extendAssistantClear(e,t,function(){
+								a.attr("src",a.attr("data-icon-open"))
+							}
+						)
+					}
+				).slideDown("fast")
+			)
+			},function(){
+				e.removeClass("hover-this"),
+				extendAssistantClear(e,t,function(){
+					a.attr("src",a.attr("data-icon-open"))
+					}
+				)
+			});
+		
+		extendAssistantClear=function(a,t,e){
+			
+			//延迟100毫秒执行
+			setTimeout(function(){
+				!$(t).hasClass("active")||$(a).hasClass("hover-this")||$(t).hasClass("hover-this")
+				||
+				($(t).hide("fast").removeClass("active"),null!==e
+				&&void 0!==e&&"undefined"!==e&&e())
+			},100)
+			
+		};
+		
+		//获取所有元素
+		var length = $(".swiper-slide").length;
+		
+		//获取默认显示的元素下标
+		var i = $(".swiper-slide").index($(".active"));
+		setInterval(function(){
+						
+			$(".swiper-slide").eq(i).removeClass("active");
+			
+			i++;
+			
+			if(i>=length) i=0;
+			
+			$(".swiper-slide").eq(i).addClass("active");
+		},4000)
+		
+	</script>
+</html>
